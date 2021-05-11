@@ -7,8 +7,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IBrandDal : IEntityRepository<Brand>
+    public interface IUserDal : IEntityRepository<User>
     {
-        List<BrandDetailDto> GetBrandDetails();
+        List<UserDetailDto> GetUserDetails();
     }
 }

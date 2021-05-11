@@ -8,9 +8,9 @@ using System.Text;
 
 namespace DataAccess.Concrete.Entity_Framework
 {
-    public class EfBrandDal : EfEntityRepositoryBase<Brand, NorthwindContext>, IBrandDal
+    public class EfUserDal : EfEntityRepositoryBase<User, NorthwindContext>, IUserDal
     {
-        public List<BrandDetailDto> GetBrandDetails()
+        public List<UserDetailDto> GetUserDetails()
         {
             throw new NotImplementedException();
         }

@@ -15,11 +15,11 @@ namespace DataAccess.Concrete
         public InMemoryCarDal()
         {   //Veritabanından geliyormuş gibi simule ediyoruz
             _cars = new List<Car> {
-                new Car {CarId = 1, BrandId = 1, ColorId = 2, ModelYear = "2021", DailyPrice = 350, Description = "Dizel"},
-                new Car {CarId = 2, BrandId = 2, ColorId = 4, ModelYear = "2019", DailyPrice = 250, Description = "Benzin"},
-                new Car {CarId = 3, BrandId = 1, ColorId = 5, ModelYear = "2021", DailyPrice = 325, Description = "Dizel"},
-                new Car {CarId = 4, BrandId = 3, ColorId = 1, ModelYear = "2010", DailyPrice = 200, Description = "LPG+Benzin"},
-                new Car {CarId = 5, BrandId = 5, ColorId = 7, ModelYear = "2016", DailyPrice = 225, Description = "Benzin"},
+                new Car {CarId = 1, BrandId = 1, ColorId = 2, ModelYear = 2021, DailyPrice = 350, Description = "Dizel"},
+                new Car {CarId = 2, BrandId = 2, ColorId = 4, ModelYear = 2021, DailyPrice = 250, Description = "Benzin"},
+                new Car {CarId = 3, BrandId = 1, ColorId = 5, ModelYear = 2021, DailyPrice = 325, Description = "Dizel"},
+                new Car {CarId = 4, BrandId = 3, ColorId = 1, ModelYear = 2010, DailyPrice = 200, Description = "LPG+Benzin"},
+                new Car {CarId = 5, BrandId = 5, ColorId = 7, ModelYear = 2016, DailyPrice = 225, Description = "Benzin"},
 
             };
         }

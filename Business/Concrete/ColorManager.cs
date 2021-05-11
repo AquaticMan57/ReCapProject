@@ -1,4 +1,7 @@
 ﻿using Business.Abstract;
+using Business.Constrat;
+using Core.Utilities;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -14,14 +17,21 @@ namespace Business.Concrete
         {
             _colorDal = colorDal;
         }
-        public List<Color> GetAllColors()
+
+        public IDataResult<List<Color>> GetAllColors()
         {
-            return _colorDal.GetAll();
+            if (DateTime.Now.Hour < 23.00 && DateTime.Now.Hour > 22.15)
+            {
+                return new ErrorDataResult<List<Color>>(Messages.MaintenanceTime);
+
+            }
+            return new SuccessDataResult<List<Color>>(_colorDal.GetAll(), true,Messages.CarsListed);
         }
 
-        public Color GetColorById(int id)
+        public IDataResult<Color> GetColorById(int id)
         {
-            return _colorDal.Get(c => c.ColorId == id);
+            return new SuccessDataResult<Color>(_colorDal.Get(c => c.ColorId == id), Messages.CarsListed);
         }
+
     }
 }
